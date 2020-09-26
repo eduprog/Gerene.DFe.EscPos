@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Vip.Printer.Enums;
 
 namespace Gerene.DFe.EscPos
@@ -12,6 +13,11 @@ namespace Gerene.DFe.EscPos
         bool UsarBarrasComoCodigo { get; set; }
         bool DocumentoCancelado { get; set; }
         byte[] Logotipo { get; set; }
+        CultureInfo Cultura { get; set; }
+        /// <summary>
+        /// Informar texto completo, ex: "Desenvolvido por: ABC Sistemas"
+        /// </summary>
+        string Desenvolvedor { get; set; }
 
         void Imprimir(string xmlcontent);
     }
